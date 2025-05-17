@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bacolod, Lanao del Norte | The Hidden Gem of Mindanao</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="homepage.css">
+   
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="bacolodsong.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <!-- Music Player Button -->
+    <button id="musicToggle" class="music-player">
+        <i class="fas fa-music"></i>
+    </button>
+    
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50 px-6 py-4 transition-all duration-300">
+        <div class="flex justify-between items-center max-w-7xl mx-auto">
+            <div class="text-blue-600 font-['Pacifico'] text-2xl flex items-center">
+                <img src="logo12.jpg" alt="Bacolod Logo" class="h-10 mr-2"> Bacolod LDN
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="flex flex-col space-y-1.5 focus:outline-none">
+                    <span class="block w-6 h-0.5 bg-gray-800 transition-all"></span>
+                    <span class="block w-6 h-0.5 bg-gray-800 transition-all"></span>
+                    <span class="block w-6 h-0.5 bg-gray-800 transition-all"></span>
+                </button>
+            </div>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors">About</a>
+                <a href="#officials" class="text-gray-700 hover:text-blue-600 transition-colors">Officials</a>
+                <a href="#barangay" class="text-gray-700 hover:text-blue-600 transition-colors">Barangay</a>
+                <a href="#news" class="text-gray-700 hover:text-blue-600 transition-colors">News</a>
+                <a href="#cultural" class="text-gray-700 hover:text-blue-600 transition-colors">Cultural</a>
+                <a href="#gallery" class="text-gray-700 hover:text-blue-600 transition-colors">Gallery</a>
+               <button id="logout-btn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors" onclick="window.location.href='index.html';">
+                    Logout <i class="fas fa-sign-out-alt ml-1"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg rounded-lg mt-2 py-2 absolute right-6 w-48 z-50">
+            <a href="#about" class="block px-4 py-2 hover:bg-gray-100 transition-colors">About</a>
+            <a href="#officials" class="block px-4 py-2 hover:bg-gray-100 transition-colors">Officials</a>
+            <a href="#barangay" class="block px-4 py-2 hover:bg-gray-100 transition-colors">Barangay</a>
+            <a href="#news" class="block px-4 py-2 hover:bg-gray-100 transition-colors">News</a>
+            <a href="#cultural" class="block px-4 py-2 hover:bg-gray-100 transition-colors">Cultural</a>
+            <a href="#gallery" class="block px-4 py-2 hover:bg-gray-100 transition-colors">Gallery</a>
+            <button id="mobile-logout-btn" class="w-full text-left px-4 py-2 hover:bg-gray-100 text-blue-500" onclick="window.location.href='index.html';">
+                Logout <i class="fas fa-sign-out-alt ml-1"></i>
+            </button>
+        </div>
+    </nav>
+    
+   <!-- Hero Section -->
+<section class="hero-section relative bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('dl1.jpg');">
+    <!-- Animated Floating Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+       
+    <!-- Hero Content -->
+    <div class="hero-content relative z-10 text-center px-4">
+        <!-- Logo with animation -->
+        <div class="logo-container mb-6">
+            <div class="relative w-24 h-24 md:w-32 md:h-32 animate-bounce-slow">
+                <img src="logo.png" alt="Bacolod Logo" class="w-full h-full object-contain drop-shadow-lg">
+            </div>
+        </div>
+        
+        <!-- Main Heading with Typing Animation -->
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-white tracking-tight">
+            <span class="heading-font inline-block bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-green-300">
+                Bacolod, Lanao del Norte
+            </span>
+        </h1>
+        
+        <!-- Subheading with animated underline -->
+        <div class="relative inline-block mb-8">
+            <p class="text-xl md:text-2xl font-light text-white/90 mb-2">The Hidden Gem of Mindanao</p>
+            <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-0.5 bg-gradient-to-r from-transparent via-yellow-400 to-transparent animate-pulse"></div>
+        </div>
+        
+        <!-- Animated Buttons -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+            <a href="#about" class="relative overflow-hidden group px-8 py-3 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <span class="relative z-10 flex items-center justify-center">
+                    Explore <i class="fas fa-chevron-down ml-2 transition-transform group-hover:translate-y-1"></i>
+                </span>
+                <span class="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></span>
+            </a>
+            
+            <a href="#contact" class="relative overflow-hidden group px-8 py-3 bg-transparent border-2 border-white rounded-full text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <span class="relative z-10 flex items-center justify-center">
+                    Contact Us <i class="fas fa-envelope ml-2 transition-transform group-hover:translate-y-1"></i>
+                </span>
+                <span class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-full"></span>
+            </a>
+        </div>
+        
+        <!-- Local Slogan in Native Language -->
+        <div class="bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 inline-block border border-white/20">
+            <p class="text-white/90 italic font-light">"Ang Bacolod - Yutang Bulahan, Malinawon ug Mauswagon. Padayon Pagsidlak Bacolod "</p>
+        </div>
+    </div>
+    
+    <!-- Animated Scrolling Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+        <a href="#about" class="block w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-colors">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </div>
+    
+    <!-- Floating Particles Animation -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+        <div class="particle particle-5"></div>
+    </div>
+</section>
+
+    
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6 heading-font">Welcome to Bacolod</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Nestled in the heart of Lanao del Norte, Bacolod is a charming municipality that offers a unique blend of natural beauty, rich cultural heritage, and warm Filipino hospitality. Discover the authentic Mindanao experience in this peaceful community.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="fact-card bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-4 mx-auto">
+                        <i class="fas fa-users text-blue-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Population</h3>
+                    <p class="text-gray-600 text-center">The municipality of Bacolod, Lanao del Norte, had a population of 24,367 as of the 2020 census. While there may be slight population fluctuations, this number represents the most recent official count.</p>
+                </div>
+                
+                <div class="fact-card bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="w-16 h-16 flex items-center justify-center bg-green-100 rounded-full mb-4 mx-auto">
+                        <i class="fas fa-map-marked-alt text-green-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Land Area</h3>
+                    <p class="text-gray-600 text-center">The municipality has a land area of 104.10 square kilometers or 40.19 square miles which constitutes 3.10% of Lanao del Norte's total area.</p>
+                </div>
+                
+                <div class="fact-card bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="w-16 h-16 flex items-center justify-center bg-orange-100 rounded-full mb-4 mx-auto">
+                        <i class="fas fa-calendar-alt text-orange-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Founding Date</h3>
+                    <p class="text-gray-600 text-center">Established on May 10, 1956, when it was officially recognized as a municipality of Lanao del Norte province.</p>
+                </div>
+            </div>
+            
+            <!-- Unity Section -->
+            <div class="mt-16 bg-gradient-to-r from-blue-50 to-green-50 p-8 rounded-2xl shadow-md">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-6 md:mb-0 md:pr-8">
+                        <img src="christianity.jpg" alt="Muslim and Christian unity in Bacolod" class="w-full h-auto rounded-xl shadow-lg">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold text-blue-600 mb-4">A Model of Harmony: Muslim and Christian Unity</h3>
+                        <p class="text-gray-600 mb-4">Bacolod, Lanao del Norte stands as a shining example of peaceful coexistence between Muslim and Christian communities. For generations, these two faiths have lived side by side in mutual respect and understanding.</p>
+                        <p class="text-gray-600 mb-4">The municipality celebrates this unity through:</p>
+                        <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                            <li>Interfaith dialogues and community gatherings</li>
+                            <li>Joint celebrations of religious holidays like Eid'l Fitr and Christmas</li>
+                            <li>Shared participation in local festivals and civic activities</li>
+                            <li>Collaborative peace-building initiatives</li>
+                            <li>Mixed neighborhoods where families of different faiths live as good neighbors</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Delicacies Section -->
+            <div class="mt-16">
+                <h3 class="text-3xl font-bold text-center mb-8 heading-font">Local Delicacies of Bacolod</h3>
+                <p class="text-gray-600 mb-8 text-center max-w-3xl mx-auto">Bacolod offers a delightful array of traditional foods that reflect its cultural diversity and agricultural abundance.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Delicacy 1 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all">
+                        <div class="h-48 overflow-hidden">
+                            <img src="pater.jpg" alt="Pastil" class="w-full h-full object-cover transition-transform duration-500">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-semibold text-lg text-blue-600">Pater</h4>
+                            <p class="text-gray-600 text-sm">Steamed rice topped with flavorful shredded chicken or beef, wrapped in banana leaves - a popular Maranao breakfast.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Delicacy 2 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all">
+                        <div class="h-48 overflow-hidden">
+                            <img src="dodol.jpg" alt="Dodol" class="w-full h-full object-cover transition-transform duration-500">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-semibold text-lg text-blue-600">Dodol</h4>
+                            <p class="text-gray-600 text-sm">A sweet, sticky treat made from coconut milk, brown sugar, and rice flour, often served during special occasions.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Delicacy 3 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all">
+                        <div class="h-48 overflow-hidden">
+                            <img src="bibingka.jpg" alt="Pianggang" class="w-full h-full object-cover transition-transform duration-500">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-semibold text-lg text-blue-600">Bibingka</h4>
+                            <p class="text-gray-600 text-sm">Bibingka is a traditional Filipino rice cake that's especially popular during Christmas, fiestas, and other celebrations.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Delicacy 4 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all">
+                        <div class="h-48 overflow-hidden">
+                            <img src="putomaya.jpg" alt="Puto Maya" class="w-full h-full object-cover transition-transform duration-500">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-semibold text-lg text-blue-600">Puto Maya</h4>
+                            <p class="text-gray-600 text-sm">Steamed sticky rice with coconut milk, typically served with ripe mangoes and hot chocolate.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-blue-50 p-6 rounded-xl">
+                        <h4 class="font-semibold text-lg text-blue-600 mb-3 flex items-center">
+                            <i class="fas fa-utensils mr-2"></i> Where to Find These Delicacies
+                        </h4>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• Bacolod Public Market - Morning and Evening food stalls</li>
+                            <li>• Local fiestas and celebrations</li>
+                            <li>• Home-based businesses in various barangays</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-green-50 p-6 rounded-xl">
+                        <h4 class="font-semibold text-lg text-blue-600 mb-3 flex items-center">
+                            <i class="fas fa-seedling mr-2"></i> Key Ingredients
+                        </h4>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• Fresh coconut from local plantations</li>
+                            <li>• Organic rice from Bacolod's fields</li>
+                            <li>• Native chicken and beef</li>
+                            <li>• Locally grown spices and herbs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+ <!-- Officials Section -->
+<section id="officials" class="py-16 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-6 heading-font">Municipal Officials</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Meet the current leaders of Bacolod, Lanao del Norte</p>
+        </div>
+        
+        <!-- Mayor and Vice Mayor -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Mayor -->
+            <div class="official-card bg-white p-6 rounded-xl shadow-md text-center border border-gray-100">
+                <div class="h-48 w-48 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-500 bg-white">
+                    <img src="mayor.png" alt="Mayor" class="w-full h-full object-cover object-top" style="background: white;">
+                </div>
+                <h3 class="text-2xl font-bold text-blue-600">Hon. Judith V. Miquiabas</h3>
+                <p class="text-lg font-semibold text-gray-700 mb-2">Municipal Mayor</p>
+                <div class="flex justify-center space-x-3 mt-4">
+                    <a href="#" class="text-blue-500 hover:text-blue-700"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-blue-400 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-pink-500 hover:text-pink-700"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <!-- Vice Mayor -->
+            <div class="official-card bg-white p-6 rounded-xl shadow-md text-center border border-gray-100">
+                <div class="h-48 w-48 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-500 bg-white">
+                    <img src="vmayor.jpg" alt="Vice Mayor" class="w-full h-full object-cover object-top" style="background: white;">
+                </div>
+                <h3 class="text-2xl font-bold text-blue-600">Hon. Alfons Janssen Alpoy Marcera</h3>
+                <p class="text-lg font-semibold text-gray-700 mb-2">Municipal Vice Mayor</p>
+                <div class="flex justify-center space-x-3 mt-4">
+                    <a href="#" class="text-blue-500 hover:text-blue-700"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-blue-400 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-pink-500 hover:text-pink-700"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Councilors Section -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-bold text-blue-600 text-center mb-8">Municipal Councilors</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Councilor 1 -->
+                <div class="official-card bg-white p-6 rounded-xl shadow-md text-center border border-gray-100">
+                    <div class="h-32 w-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-500 bg-white">
+                        <img src="councilor1.png" alt="Councilor" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-600">Hon. Makoy Duhaylungsod</h3>
+                    <div class="flex justify-center space-x-3 mt-3">
+                        <a href="#" class="text-blue-500 hover:text-blue-700"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-blue-400 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Councilor 2 -->
+                <div class="official-card bg-white p-6 rounded-xl shadow-md text-center border border-gray-100">
+                    <div class="h-32 w-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-500 bg-white">
+                        <img src="councilor2.png" alt="Councilor" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-600">Hon. Poloy Sanguila</h3>
+                    <div class="flex justify-center space-x-3 mt-3">
+                        <a href="#" class="text-blue-500 hover:text-blue-700"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-blue-400 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Councilor 3 -->
+                <div class="official-card bg-white p-6 rounded-xl shadow-md text-center border border-gray-100">
+                    <div class="h-32 w-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-500 bg-white">
+                        <img src="councilor3.png" alt="Councilor" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-600">Hon. Eugenio Manuel Mendez</h3>
+                    <div class="flex justify-center space-x-3 mt-3">
+                        <a href="#" class="text-blue-500 hover:text-blue-700"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-blue-400 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Councilor 4 -->
+                <div class="official-card bg-white p-6 rounded-xl shadow-md text-center border border-gray-100">
+                    <div class="h-32 w-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-500 bg-white">
+                        <img src="councilor4.png" alt="Councilor" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-600">Hon. Wilmore Zamora</h3>
+                    <div class="flex justify-center space-x-3 mt-3">
+                        <a href="#" class="text-blue-500 hover:text-blue-700"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-blue-400 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Councilor 5 -->
+                <div class="official-card bg-white p-6 rounded-xl shadow-md text-center border border-gray-100">
+                    <div class="h-32 w-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-500 bg-white">
+                        <img src="councilor5.png" alt="Councilor" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-600">Hon. Johanna Balane</h3>
+                    <div class="flex justify-center space-x-3 mt-3">
+                        <a href="#" class="text-blue-500 hover:text-blue-700"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-blue-400 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Councilor 6 -->
+                <div class="official-card bg-white p-6 rounded-xl shadow-md text-center border border-gray-100">
+                    <div class="h-32 w-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-500 bg-white">
+                        <img src="councilor6.png" alt="Councilor" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-600">Hon. Lorie Ann Tario</h3>
+                    <div class="flex justify-center space-x-3 mt-3">
+                        <a href="#" class="text-blue-500 hover:text-blue-700"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-blue-400 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Councilor 7 -->
+                <div class="official-card bg-white p-6 rounded-xl shadow-md text-center border border-gray-100">
+                    <div class="h-32 w-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-500 bg-white">
+                        <img src="councilor7.png" alt="Councilor" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-600">Hon. Mark Patiño</h3>
+                    <div class="flex justify-center space-x-3 mt-3">
+                        <a href="#" class="text-blue-500 hover:text-blue-700"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-blue-400 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Councilor 8 -->
+                <div class="official-card bg-white p-6 rounded-xl shadow-md text-center border border-gray-100">
+                    <div class="h-32 w-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-500 bg-white">
+                        <img src="councilor8.png" alt="Councilor" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-600">Hon. Bailala Balowa</h3>
+                    <div class="flex justify-center space-x-3 mt-3">
+                        <a href="#" class="text-blue-500 hover:text-blue-700"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-blue-400 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Municipal Mission & Vision - Now at the bottom -->
+        <div class="bg-white p-8 rounded-xl shadow-md">
+            <h3 class="text-2xl font-bold text-blue-600 mb-6 text-center">Municipal Mission & Vision</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-blue-50 p-6 rounded-lg">
+                    <h4 class="text-xl font-semibold mb-3 flex items-center">
+                        <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+                            <i class="fas fa-bullseye text-blue-500"></i>
+                        </div>
+                        Mission
+                    </h4>
+                    <p class="text-gray-600">To provide quality services to the people of Bacolod through transparent governance, sustainable development programs, and community empowerment, ensuring a progressive and peaceful municipality for all residents.</p>
+                </div>
+                <div class="bg-green-50 p-6 rounded-lg">
+                    <h4 class="text-xl font-semibold mb-3 flex items-center">
+                        <div class="w-10 h-10 flex items-center justify-center bg-green-100 rounded-full mr-3">
+                            <i class="fas fa-eye text-green-500"></i>
+                        </div>
+                        Vision
+                    </h4>
+                    <p class="text-gray-600">A progressive, resilient, and united Bacolod where empowered citizens enjoy quality services, sustainable livelihood opportunities, and a peaceful community anchored on good governance and cultural preservation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+   <!-- Barangays Section -->
+<section id="barangay" class="py-16 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-6 heading-font">Barangays of Bacolod</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Bacolod is composed of 16 barangays, each with its own unique character and community.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Barangay 1 - Alegria -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                <div class="h-48 mb-4 rounded-xl overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12619.123456789012!2d123.950734!3d8.232456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTMnNTYuOCJOIDEyM8KwNTcnMDIuNiJF!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-600">Alegria</h3>
+                <p class="text-gray-600 text-sm">Population: 1,200 (2020 Census)</p>
+                <div class="mt-3 flex justify-between items-center">
+                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Barangay</span>
+                    <a href="#" class="text-blue-500 text-sm font-medium">Learn More <i class="fas fa-chevron-right ml-1"></i></a>
+                </div>
+            </div>
+            
+            <!-- Barangay 2 - Babalaya -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                <div class="h-48 mb-4 rounded-xl overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12619.123456789012!2d123.950734!3d8.232456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTMnNTYuOCJOIDEyM8KwNTcnMDIuNiJF!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-600">Babalaya</h3>
+                <p class="text-gray-600 text-sm">Population: 1,500 (2020 Census)</p>
+                <div class="mt-3 flex justify-between items-center">
+                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Barangay</span>
+                    <a href="#" class="text-blue-500 text-sm font-medium">Learn More <i class="fas fa-chevron-right ml-1"></i></a>
+                </div>
+            </div>
+            
+            <!-- Barangay 3 - Babalayan Townsite -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                <div class="h-48 mb-4 rounded-xl overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12619.123456789012!2d123.950734!3d8.232456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTMnNTYuOCJOIDEyM8KwNTcnMDIuNiJF!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-600">Babalayan Townsite</h3>
+                <p class="text-gray-600 text-sm">Population: 2,100 (2020 Census)</p>
+                <div class="mt-3 flex justify-between items-center">
+                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Barangay</span>
+                    <a href="#" class="text-blue-500 text-sm font-medium">Learn More <i class="fas fa-chevron-right ml-1"></i></a>
+                </div>
+            </div>
+            
+            <!-- Barangay 4 - Binuni -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                <div class="h-48 mb-4 rounded-xl overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12619.123456789012!2d123.950734!3d8.232456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTMnNTYuOCJOIDEyM8KwNTcnMDIuNiJF!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-600">Binuni</h3>
+                <p class="text-gray-600 text-sm">Population: 1,800 (2020 Census)</p>
+                <div class="mt-3 flex justify-between items-center">
+                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Barangay</span>
+                    <a href="#" class="text-blue-500 text-sm font-medium">Learn More <i class="fas fa-chevron-right ml-1"></i></a>
+                </div>
+            </div>
+            
+            <!-- Barangay 5 - Delabayan West -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                <div class="h-48 mb-4 rounded-xl overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12619.123456789012!2d123.950734!3d8.232456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTMnNTYuOCJOIDEyM8KwNTcnMDIuNiJF!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-600">Delabayan West</h3>
+                <p class="text-gray-600 text-sm">Population: 1,400 (2020 Census)</p>
+                <div class="mt-3 flex justify-between items-center">
+                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Barangay</span>
+                    <a href="#" class="text-blue-500 text-sm font-medium">Learn More <i class="fas fa-chevron-right ml-1"></i></a>
+                </div>
+            </div>
+            
+            <!-- Barangay 6 - Demologan -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                <div class="h-48 mb-4 rounded-xl overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12619.123456789012!2d123.950734!3d8.232456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTMnNTYuOCJOIDEyM8KwNTcnMDIuNiJF!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-600">Demologan</h3>
+                <p class="text-gray-600 text-sm">Population: 1,600 (2020 Census)</p>
+                <div class="mt-3 flex justify-between items-center">
+                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Barangay</span>
+                    <a href="#" class="text-blue-500 text-sm font-medium">Learn More <i class="fas fa-chevron-right ml-1"></i></a>
+                </div>
+            </div>
+            
+            <!-- Barangay 7 - Demarao -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                <div class="h-48 mb-4 rounded-xl overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12619.123456789012!2d123.950734!3d8.232456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTMnNTYuOCJOIDEyM8KwNTcnMDIuNiJF!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-600">Demarao</h3>
+                <p class="text-gray-600 text-sm">Population: 1,300 (2020 Census)</p>
+                <div class="mt-3 flex justify-between items-center">
+                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Barangay</span>
+                    <a href="#" class="text-blue-500 text-sm font-medium">Learn More <i class="fas fa-chevron-right ml-1"></i></a>
+                </div>
+            </div>
+            
+            <!-- Barangay 8 - Esperanza -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                <div class="h-48 mb-4 rounded-xl overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12619.123456789012!2d123.950734!3d8.232456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTMnNTYuOCJOIDEyM8KwNTcnMDIuNiJF!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-600">Esperanza</h3>
+                <p class="text-gray-600 text-sm">Population: 1,700 (2020 Census)</p>
+                <div class="mt-3 flex justify-between items-center">
+                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Barangay</span>
+                    <a href="#" class="text-blue-500 text-sm font-medium">Learn More <i class="fas fa-chevron-right ml-1"></i></a>
+                </div>
+            </div>
+            
+            <!-- Barangay 9 - Kahayag -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                <div class="h-48 mb-4 rounded-xl overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12619.123456789012!2d123.950734!3d8.232456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTMnNTYuOCJOIDEyM8KwNTcnMDIuNiJF!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-600">Kahayag</h3>
+                <p class="text-gray-600 text-sm">Population: 1,900 (2020 Census)</p>
+                <div class="mt-3 flex justify-between items-center">
+                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Barangay</span>
+                    <a href="#" class="text-blue-500 text-sm font-medium">Learn More <i class="fas fa-chevron-right ml-1"></i></a>
+                </div>
+            </div>
+            
+            <!-- Barangay 10 - Liangan East -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                <div class="h-48 mb-4 rounded-xl overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12619.123456789012!2d123.950734!3d8.232456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTMnNTYuOCJOIDEyM8KwNTcnMDIuNiJF!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-600">Liangan East</h3>
+                <p class="text-gray-600 text-sm">Population: 2,200 (2020 Census)</p>
+                <div class="mt-3 flex justify-between items-center">
+                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Barangay</span>
+                    <a href="#" class="text-blue-500 text-sm font-medium">Learn More <i class="fas fa-chevron-right ml-1"></i></a>
+                </div>
+            </div>
+            
+            <!-- Barangay 11 - Punod (Maliwanag) -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                <div class="h-48 mb-4 rounded-xl overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12619.123456789012!2d123.950734!3d8.232456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTMnNTYuOCJOIDEyM8KwNTcnMDIuNiJF!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-600">Punod (Maliwanag)</h3>
+                <p class="text-gray-600 text-sm">Population: 1,600 (2020 Census)</p>
+                <div class="mt-3 flex justify-between items-center">
+                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Barangay</span>
+                    <a href="#" class="text-blue-500 text-sm font-medium">Learn More <i class="fas fa-chevron-right ml-1"></i></a>
+                </div>
+            </div>
+            
+            <!-- Barangay 12 - Mate -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                <div class="h-48 mb-4 rounded-xl overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12619.123456789012!2d123.950734!3d8.232456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTMnNTYuOCJOIDEyM8KwNTcnMDIuNiJF!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-600">Mate</h3>
+                <p class="text-gray-600 text-sm">Population: 1,400 (2020 Census)</p>
+                <div class="mt-3 flex justify-between items-center">
+                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Barangay</span>
+                    <a href="#" class="text-blue-500 text-sm font-medium">Learn More <i class="fas fa-chevron-right ml-1"></i></a>
+                </div>
+            </div>
+            
+            <!-- Barangay 13 - Minaulon -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                <div class="h-48 mb-4 rounded-xl overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12619.123456789012!2d123.950734!3d8.232456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTMnNTYuOCJOIDEyM8KwNTcnMDIuNiJF!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-600">Minaulon</h3>
+                <p class="text-gray-600 text-sm">Population: 732 (2020 Census)</p>
+                <div class="mt-3 flex justify-between items-center">
+                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Barangay</span>
+                    <a href="#" class="text-blue-500 text-sm font-medium">Learn More <i class="fas fa-chevron-right ml-1"></i></a>
+                </div>
+            </div>
+            
+            <!-- Barangay 14 - Pagayawan -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                <div class="h-48 mb-4 rounded-xl overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12619.123456789012!2d123.950734!3d8.232456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTMnNTYuOCJOIDEyM8KwNTcnMDIuNiJF!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-600">Pagayawan</h3>
+                <p class="text-gray-600 text-sm">Population: 1,500 (2020 Census)</p>
+                <div class="mt-3 flex justify-between items-center">
+                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Barangay</span>
+                    <a href="#" class="text-blue-500 text-sm font-medium">Learn More <i class="fas fa-chevron-right ml-1"></i></a>
+                </div>
+            </div>
+            
+            <!-- Barangay 15 - Poblacion -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                <div class="h-48 mb-4 rounded-xl overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12619.123456789012!2d123.950734!3d8.232456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTMnNTYuOCJOIDEyM8KwNTcnMDIuNiJF!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-600">Poblacion</h3>
+                <p class="text-gray-600 text-sm">Population: 2,500 (2020 Census)</p>
+                <div class="mt-3 flex justify-between items-center">
+                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Barangay</span>
+                    <a href="#" class="text-blue-500 text-sm font-medium">Learn More <i class="fas fa-chevron-right ml-1"></i></a>
+                </div>
+            </div>
+            
+            <!-- Barangay 16 - Rupagan -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                <div class="h-48 mb-4 rounded-xl overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12619.123456789012!2d123.950734!3d8.232456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTMnNTYuOCJOIDEyM8KwNTcnMDIuNiJF!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-600">Rupagan</h3>
+                <p class="text-gray-600 text-sm">Population: 1,727 (2020 Census)</p>
+                <div class="mt-3 flex justify-between items-center">
+                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Barangay</span>
+                    <a href="#" class="text-blue-500 text-sm font-medium">Learn More <i class="fas fa-chevron-right ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- News Section -->
+    <section id="news" class="py-16 bg-gray-50 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6 heading-font">Latest News</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Stay updated with the latest happenings and developments in Bacolod, Lanao del Norte.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="news-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <div class="h-48 overflow-hidden">
+                        <img src="news2.jpg" alt="News Image" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Event</span>
+                            <span class="mx-2">•</span>
+                            <span>Jan 13, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Agri-Aqua/Business Booth Contest</h3>
+                        <p class="text-gray-600 mb-4">Celebrate creativity, innovation, and the hardworking spirit of our local farmers, fisherfolks, and businesses. Join us and experience the vibrant fiesta spirit!</p>
+                        <a href="#" class="text-blue-500 font-medium inline-flex items-center">Read More <i class="fas fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <div class="news-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <div class="h-48 overflow-hidden">
+                        <img src="news3.jpg" alt="News Image" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Development</span>
+                            <span class="mx-2">•</span>
+                            <span>May 7, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">New Fountain Near Bus terminal</h3>
+                        <p class="text-gray-600 mb-4">Municipality of Bacolod has announced a new project which is fountain to enhance the town's public spaces and provide a refreshing attraction for residents and visitors alike.</p>
+                        <a href="#" class="text-blue-500 font-medium inline-flex items-center">Read More <i class="fas fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <div class="news-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <div class="h-48 overflow-hidden">
+                        <img src="news1.jpg" alt="News Image" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs">Tourism</span>
+                            <span class="mx-2">•</span>
+                            <span>March 26, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">74th DSWD Anniversary</h3>
+                        <p class="text-gray-600 mb-4">Our LGU was recently honored during the 74th DSWD Anniversary and Awards Ceremony with the prestigious Gawad Kalambuan Awards and Gawad Paaglilingkod sa Sambayan Awards.</p>
+                        <a href="#" class="text-blue-500 font-medium inline-flex items-center">Read More <i class="fas fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    
+    <!-- Cultural Section -->
+    <section id="cultural" class="py-16 bg-white px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6 heading-font text-gray-800">Cultural Highlights</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Bacolod boasts a rich tapestry of cultural traditions that reflect its diverse heritage and historical influences.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded shadow-md overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img src="sagayan.jpg" alt="Local Traditions" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Local Traditions</h3>
+                        <p class="text-gray-600">Experience the Sagayan Festival, celebrating ancestral traditions through music, dance, and colorful traditional attire that honors Bacolod's rich cultural heritage.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded shadow-md overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img src="parish.jpg" alt="Religious Practices" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Religious Practices</h3>
+                        <p class="text-gray-600">Witness the harmonious coexistence of Catholic and Islamic traditions, with beautiful mosques and churches serving as centers for spiritual gatherings and celebrations.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded shadow-md overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img src="culture.JPG" alt="Indigenous Culture" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Indigenous Culture</h3>
+                        <p class="text-gray-600">Discover the rich heritage of local indigenous communities through their intricate weaving, traditional medicine practices, and oral storytelling traditions.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded shadow-md overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img src="fiesta.jpg" alt="Community Events" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Community Events</h3>
+                        <p class="text-gray-600">Join the lively Araw ng Bacolod celebrations, featuring parades, sports competitions, cultural performances, and community feasts that bring together residents of all ages.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map" class="py-16 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6 heading-font">Geographic Features</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Situated in the northern region of Mindanao, Bacolod offers diverse landscapes and strategic connectivity to major cities.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="h-96 rounded-xl shadow-md overflow-hidden">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12620.25232889646!2d123.950734!3d8.232456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3255b5b5a5b5b5b5%3A0x5b5b5b5b5b5b5b5b!2sBacolod%2C%20Lanao%20del%20Norte!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        class="rounded-xl">
+                    </iframe>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-semibold mb-4 flex items-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+                                <i class="fas fa-map-marker-alt text-blue-500"></i>
+                            </div>
+                            Notable Landmarks
+                        </h3>
+                        <ul class="space-y-3 text-gray-600 ml-14">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Bacolod Municipal Hall - government center</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Santo Niño parish - Religious landmark</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Pagayawan falls - Natural attraction</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Masidlakon falls - Natural attraction</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Buaknabato falls - Natural attraction</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Pasi-Taytayan - Sunset view</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-semibold mb-4 flex items-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-green-100 rounded-full mr-3">
+                                <i class="fas fa-road text-green-500"></i>
+                            </div>
+                            Connectivity
+                        </h3>
+                        <ul class="space-y-3 text-gray-600 ml-14">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>45 minutes from Iligan City</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>2.5 hours from Cagayan de Oro</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Accessible via national highway</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Regular motor and bus services</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-semibold mb-4 flex items-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-yellow-100 rounded-full mr-3">
+                                <i class="fas fa-sun text-yellow-500"></i>
+                            </div>
+                            Climate
+                        </h3>
+                        <div class="grid grid-cols-2 gap-4 ml-14">
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <p class="font-semibold">Dry Season</p>
+                                <p class="text-gray-600">November to April</p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <p class="font-semibold">Wet Season</p>
+                                <p class="text-gray-600">May to October</p> 
+                            </div>
+                            <div class="bg-yellow-50 p-4 rounded-lg">
+                                <p class="font-semibold">Average Temp</p>
+                                <p class="text-gray-600">24°C - 32°C</p>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg">
+                                <p class="font-semibold">Annual Rainfall</p>
+                                <p class="text-gray-600">2,000mm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6 heading-font">Photo Gallery</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Explore the beauty and charm of Bacolod through these captivating images.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-img rounded-xl overflow-hidden shadow-md cursor-pointer relative">
+                    <img src="taytayan.jpg" alt="Local Scenery" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent text-white">
+                        <p class="font-semibold">Pasi-Taytayan</p>
+                        <p class="text-sm opacity-90">Breathtaking sunset views</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-img rounded-xl overflow-hidden shadow-md cursor-pointer relative">
+                    <img src="municipyo.jpg" alt="Important Buildings" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent text-white">
+                        <p class="font-semibold">Bacolod Municipal Hall</p>
+                        <p class="text-sm opacity-90">Center of local governance</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-img rounded-xl overflow-hidden shadow-md cursor-pointer relative">
+                    <img src="lyre.jpg" alt="Cultural Events" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent text-white">
+                        <p class="font-semibold">Drum and lyre</p>
+                        <p class="text-sm opacity-90">Vibrant cultural performances</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-img rounded-xl overflow-hidden shadow-md cursor-pointer relative">
+                    <img src="market.png" alt="Daily Life" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent text-white">
+                        <p class="font-semibold">Bacolod Public Market</p>
+                        <p class="text-sm opacity-90">Local commerce hub</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-img rounded-xl overflow-hidden shadow-md cursor-pointer relative">
+                    <img src="pagayawan.jpg" alt="Natural Attractions" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent text-white">
+                        <p class="font-semibold">Pagayawan falls</p>
+                        <p class="text-sm opacity-90">Natural wonder</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-img rounded-xl overflow-hidden shadow-md cursor-pointer relative">
+                    <img src="bungi.jpg" alt="Coastal Life" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent text-white">
+                        <p class="font-semibold">Bungi Cave</p>
+                        <p class="text-sm opacity-90">Geological marvel</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Information Section -->
+    <section id="information" class="py-16 bg-gray-50 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6 heading-font">Local Information</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Discover the essential services and economic activities that form the backbone of Bacolod's community.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-6 mx-auto">
+                        <i class="fas fa-store text-blue-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center">Economic Activities</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                            <span>Agriculture (rice, corn, coconut)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                            <span>Fishing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                            <span>Eco-tourism and cultural festivals attract visitors</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                            <span>Local handicrafts (weaving, pottery)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                            <span>Growing eco-tourism sector</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="w-16 h-16 flex items-center justify-center bg-green-100 rounded-full mb-6 mx-auto">
+                        <i class="fas fa-school text-green-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center">Educational Institutions</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Bacolod Central Elementary School</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Laubach Institute</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Santo Niño High School</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Liangan National High school</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="w-16 h-16 flex items-center justify-center bg-purple-100 rounded-full mb-6 mx-auto">
+                        <i class="fas fa-hospital text-purple-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center">Healthcare Facilities</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                            <span>Bacolod Rural Health Unit</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                            <span>Andot Medical Clinic</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                            <span>Barangay Health Stations (6 locations)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                            <span>Liangan East Health Center</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                            <span>Mobile Medical Missions (quarterly)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6 heading-font">Contact & Resources</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Connect with local government offices and access important information about Bacolod.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+                                <i class="fas fa-landmark text-blue-500"></i>
+                            </div>
+                            Local Government
+                        </h3>
+                        <ul class="space-y-4 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-user text-blue-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="font-semibold">Mayor's Office</p>
+                                    <p>Judith V. Miquiabas</p>
+                                    <p>+63 (917) 555-1234</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-building text-blue-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="font-semibold">Municipal Hall</p>
+                                    <p>Poblacion, Bacolod, Lanao del Norte</p>
+                                    <p>Open Monday-Friday, 8:00 AM - 5:00 PM</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-envelope text-blue-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="font-semibold">Email</p>
+                                    <p>bacolod.lanaodelnorte@gov.ph</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-red-100 rounded-full mr-3">
+                                <i class="fas fa-exclamation-triangle text-red-500"></i>
+                            </div>
+                            Emergency Numbers
+                        </h3>
+                        <ul class="space-y-4 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-ambulance text-red-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="font-semibold">Medical Emergency</p>
+                                    <p>+63 (917) 555-9911</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-police-box text-red-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="font-semibold">Police Station</p>
+                                    <p>+63 (917) 555-1166</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-fire-extinguisher text-red-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="font-semibold">Fire Department</p>
+                                    <p>+63 (917) 555-7788</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-life-ring text-red-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="font-semibold">Disaster Response</p>
+                                    <p>+63 (917) 555-4433</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-purple-100 rounded-full mr-3">
+                                <i class="fas fa-link text-purple-500"></i>
+                            </div>
+                            Official Channels
+                        </h3>
+                        <ul class="space-y-4 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-globe text-purple-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="font-semibold">Official Website</p>
+                                    <p>www.bacolod-lanaodelnorte.gov.ph</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fab fa-facebook text-blue-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="font-semibold">Facebook</p>
+                                    <p>@BacolodLDNOfficial</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fab fa-instagram text-pink-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="font-semibold">Instagram</p>
+                                    <p>@bacolod_ldn</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fab fa-youtube text-red-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="font-semibold">YouTube</p>
+                                    <p>Bacolod LDN Channel</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-green-100 rounded-full mr-3">
+                                <i class="fas fa-info-circle text-green-500"></i>
+                            </div>
+                            Tourist Information
+                        </h3>
+                        <ul class="space-y-4 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="font-semibold">Tourism Office</p>
+                                    <p>Municipal Plaza, Bacolod</p>
+                                    <p>+63 (917) 555-2277</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-hotel text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="font-semibold">Accommodations</p>
+                                    <p>Bacolod Travelers Inn</p>
+                                    <p>Mountain View Homestay</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-bus text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="font-semibold">Transportation</p>
+                                    <p>Sidecar Terminal: Poblacion Bacolod</p>
+                                    <p>Bus Stop: National Highway</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <h3 class="text-2xl font-semibold mb-6">Stay Updated</h3>
+                    <p class="text-gray-600 mb-6">Subscribe to our newsletter to receive updates about events, announcements, and developments in Bacolod.</p>
+                    
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="interest" class="block text-sm font-medium text-gray-700 mb-1">Areas of Interest</label>
+                            <select id="interest" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                                <option>News & Announcements</option>
+                                <option>Events & Festivals</option>
+                                <option>Tourism Updates</option>
+                                <option>All Updates</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors">
+                            Subscribe <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-4">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4 heading-font">Bacolod LDN</h3>
+                <p class="text-gray-400">The Hidden Gem of Mindanao, where natural beauty meets cultural richness and community spirit.</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#about" class="text-gray-400 hover:text-white">About Bacolod</a></li>
+                    <li><a href="#officials" class="text-gray-400 hover:text-white">Municipal Officials</a></li>
+                    <li><a href="#barangay" class="text-gray-400 hover:text-white">Barangays</a></li>
+                    <li><a href="#news" class="text-gray-400 hover:text-white">Latest News</a></li>
+                    <li><a href="#gallery" class="text-gray-400 hover:text-white">Photo Gallery</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Services</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Business Permits</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Health Services</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Education</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Tourism</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Agriculture</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                <ul class="space-y-2">
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt mt-1 mr-2 text-gray-400"></i>
+                        <span class="text-gray-400">Municipal Hall, Poblacion, Bacolod, Lanao del Norte</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-phone-alt mt-1 mr-2 text-gray-400"></i>
+                        <span class="text-gray-400">+63 (917) 555-1234</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-envelope mt-1 mr-2 text-gray-400"></i>
+                        <span class="text-gray-400">bacolod.lanaodelnorte@gov.ph</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 Bacolod, Lanao del Norte. All rights reserved.</p>
+        </div>
+    </footer>
+ <script src="mobilemenujava.js"></script>
+</body>
+</html>
